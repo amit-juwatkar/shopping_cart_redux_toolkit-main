@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://amit-juwatkar.github.io/shopping_cart_redux_toolkit-main",
   "scripts": {
-    "lint": "oxlint",
     "preview": "vite preview",
     "dev": "vite",
     "build": "vite build",

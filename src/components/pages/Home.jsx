@@ -17,7 +17,6 @@ export default function Home() {
       .then((res) => res.data)
       .then((finalRes) => {
         setproducts(finalRes.products);
-        //console.log(finalRes)
       });
   };
 
@@ -48,10 +47,7 @@ function ProductCard({ data }) {
 
   let cart = useSelector((state) => state.cartStore.cart);
 
-  console.log("cart id" + " " + cart);
-
   let checkIteminCart = cart.find((obj) => obj.id == id);
-  //console.log("id" + " "+checkIteminCart)
 
   const addTocartItem = () => {
     const cartObj = {
@@ -61,7 +57,6 @@ function ProductCard({ data }) {
       id,
       qty:1
     };
-    console.log("home page: ",cartObj);
 
     dispatch(addToCart(cartObj));
     toast.success("Item added in cart");

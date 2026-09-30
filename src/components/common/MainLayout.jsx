@@ -9,7 +9,7 @@ export default function MainLayout(){
     return(
         <Provider store={store}>
           <Header />
-            <Outlet />
+          <Outlet />
           <Footer />
         </Provider>
     )

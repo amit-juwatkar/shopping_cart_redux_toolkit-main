@@ -1,21 +1,14 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 import "./index.css";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/pages/Home.jsx";
-import Cart from "./components/pages/Cart.jsx";
-import MainLayout from "./components/common/MainLayout.jsx";
-
-createRoot(document.getElementById("root")).render(
- 
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/cart"} element={<Cart />} />
-        </Route>
-      </Routes>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/shopping_cart_redux_toolkit-main">
+      <App />
     </BrowserRouter>
-
+  </React.StrictMode>
 );

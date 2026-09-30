@@ -6,8 +6,6 @@ export default function Header() {
 let myData = useSelector((mystore)=>mystore.counterStore.count);
 let cart = useSelector((mystore)=>mystore.cartStore.cart);
 
-console.log(cart);
-
   return (
     <div>
       <nav className="bg-neutral-primary w-full z-20 top-0 start-0 border-b border-default">
